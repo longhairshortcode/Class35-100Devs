@@ -22,3 +22,25 @@ function squareDigits(num){
     }
     return Number(results.join(''));
 };
+
+
+
+function asyncForEach(array, cb) {
+    array.forEach(function () {
+        setTimeout(cb, 0);
+    })
+}
+
+asyncForEach([1, 2, 3, 4], function (i) {
+    console.log(i);
+})
+
+//class 36
+
+function stray(numbers){
+    for (let i in numbers){
+       if (numbers.indexOf(numbers[i]) === numbers.lastIndexOf(numbers[i])){
+         return numbers[i];
+       }
+    }
+  }
